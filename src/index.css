@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+@custom-variant landscape (@media (orientation: landscape));
+
+.container {
+  @apply max-w-330 mx-auto;
+}
+
+@layer {
+  .manu ul li a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    transition: all linear 0.25s;
+  }
+
+  .manu ul li a:hover {
+    font-weight: 700;
+    color: #4756df;
+  }
+}
+
+/* Scroll hole menu text black */
+.manu.scrolled ul li a {
+  color: #000;
+}
+
+.manu.scrolled ul li a:hover {
+  font-weight: 700;
+  color: #4756df;
+}
+
+/* Active menu item */
+.manu ul li a.nav-active {
+  color: #4756df !important;
+  font-weight: 700;
+}
+
+/* Mobile menu active item */
+.manu2 a.nav-active {
+  color: #4756df !important;
+  font-weight: 700;
+}
+
+@media (max-width: 1023px) {
+  .manu ul li a {
+    
+    font-size: 16px;
+  }
+
+}
+
+.nav-active{
+  color: aqua;
+}
+
+@layer {
+  .manu2  a {
+    
+    color: #4756df;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    transition: all linear 0.2s;
+    padding-top: 20px;
+    /* border-bottom: 1px solid #fff; */
+  }
+  
+  .manu2 a:hover {
+    font-weight: 700;
+    color: #919ae6;
+  }
+}
+  
+  .service-item1 {
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .portfolios{
+    transition: all ease-in-out 0.3s;
+  }
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --shadow-service :  0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Default style (In-active slides) */
+.item2 {
+  background-color: transparent; /* Ba apnar default color */
+  transition: background-color 0.4s ease;
+}
+
+/* Active slide-er background color change */
+.swiper-slide-active .item2 {
+  background-color: #F4EFEF;
+  border: 1px solid #CCCCCC; /* Optional: active slide-e border-o dite paren */
+}
+
+
+.swiper-pagination-bullet {
+  background: #4756df !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background: white !important;
+  position: relative !important ;
+  
+}
+
+
+.swiper-pagination-bullet-active::after {
+  content: "" !important;   /* eta must */
+  display: block !important; /*na dile size apply nao hote pare*/
+  background-color: #4756df !important;
+  height: 16px !important;
+  width: 16px !important;
+  border-radius: 50% !important; 
+  top: 50% !important;
+  left: 50%!important;
+  transform: translate(-50%, -50%)!important;
+  position: relative !important ;
+}
+
+
+/* lg and up */
+@media (min-width: 1024px) {
+  .swiper-pagination-bullet {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  
+  .swiper-pagination-bullet-active::after {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+.Review-slider .swiper-slide-active {
+  background-color: #F4EFEF !important;
+  display: block !important;
+  border-radius: 30px !important ;
+}
+
+}
+
+@media (max-width: 1023px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
+
